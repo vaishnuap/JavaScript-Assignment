@@ -1,0 +1,144 @@
+# JavaScript Assigenments
+Assigment Answer
+//1. Create a page with header, footer, body and left side navigation with 2 links - Add and View.
+
+//2. &#39;Add&#39; link: Should display a page with 4-5 input fields (textbox, dropdown, checkbox etc.) with
+labels along with Submit button. Clicking the Submit button should save the data (You can use
+windows session Storage to save the data). User can enter any no. of records. Validations on these
+fields is nice to have feature.
+
+//3. &#39;View&#39; link: Should display a table of all the records entered on &#39;Add&#39; page.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Page</title>
+    <style>
+           header {
+        background-color: rgb(205, 150, 150);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+   
+      footer {
+        background-color: rgb(201, 140, 140);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      
+      nav {
+        background-color: #ddd;
+        float: left;
+        width: 200px;
+        height: 100%;
+        padding: 20px;
+      }
+      
+     
+      nav a {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      
+      
+      nav a.active {
+        color: #fff;
+        background-color: #333;
+      }
+      
+     
+      main {
+        margin-left: 220px;
+        padding: 20px;
+      }
+      
+      
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        margin-bottom: 20px;
+      }
+      
+      label {
+        font-weight: bold;
+      }
+      
+      input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+    
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Page</h1>
+    </header>
+    <nav>
+      <a href="#" class="active">Add</a>
+      <a href="#">View</a>
+    </nav>
+    <main>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <input type="submit" value="Submit">
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Subscribe</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Page</p>
+    </footer>
+  </body>
+</html>
